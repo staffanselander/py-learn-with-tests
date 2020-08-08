@@ -1,2 +1,2 @@
 def welcome(name):
-    return f"Welcome {name}!"
+    return "Welcome " + name + "!"
