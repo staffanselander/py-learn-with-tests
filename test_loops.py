@@ -28,9 +28,9 @@ def test_for_loop():
 
 def test_while_loop():
     # The while loop looks pretty similar to other languages.
-    count = 0
+    loop_count = 0
 
-    while count < 3:
-        count += 1
+    while loop_count < 3:
+        loop_count += 1
 
-    assert count == 3
+    assert loop_count == 3
