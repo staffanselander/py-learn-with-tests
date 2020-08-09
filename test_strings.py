@@ -13,6 +13,6 @@ def test_interpolation():
     # Interpolate using Str.format().
     assert 'Hello {}!'.format(name) == "Hello Staffan!"
 
-    # Interpolate using f-strings is possible after Python version 3.6 .
+    # Interpolate using f-strings is possible after Python version 3.5.
     if sys.version_info.major >= 3 and sys.version_info.micro >= 6:
         assert f"Hello {name}!" == "Hello Staffan!"
