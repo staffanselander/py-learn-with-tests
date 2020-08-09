@@ -28,7 +28,10 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    # We only want to lint using Python 3.8. Some features that we are testing
+    # will fail on older versions.
     - name: Lint with flake8
+      if: matrix.python-version == 3.8
       run: |
         # stop the build if there are Python syntax errors or undefined names
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
