@@ -1,6 +1,3 @@
-import sys
-
-
 def test_interpolate_using_concatenation():
     name = "Staffan"
 
