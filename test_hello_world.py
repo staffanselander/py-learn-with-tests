@@ -10,3 +10,12 @@ def test_welcome():
 
     # Assert another name.
     assert hello_world.welcome("John") == "Welcome John!"
+
+
+def test_welcome_with_wrong_type():
+    # When you call a function with the wrong type.
+    # Python will throw/raise a expected/catchable TypeError.
+    try:
+        hello_world.welcome(0)
+    except Exception as err:
+        assert isinstance(err, TypeError)
